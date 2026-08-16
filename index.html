@@ -56,6 +56,10 @@ h1{font-size:24px;font-weight:700;margin:0;letter-spacing:-.3px}
 .seg .go:hover{background:color-mix(in srgb,var(--accent) 18%,transparent)}
 .seg .go svg{width:14px;height:14px;animation:nudge 2.2s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.seg .go svg{animation:none}}
+.seg.soon{border-style:dashed;background:transparent}
+.seg.soon h3,.seg.soon p{opacity:.72}
+.seg .soonbadge{margin-top:13px;align-self:flex-start;background:var(--chip);color:var(--muted);
+  border-radius:9px;padding:7px 14px;font-size:12.5px;font-weight:700;letter-spacing:.2px}
 
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:132px}
@@ -214,23 +218,39 @@ const CHEV = `<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="cu
 function head(m){
   const v = m.volume, c = m.counts;
   document.getElementById("stats").innerHTML = [
-    [fmtN(c.total), "veri kaynağı"],
-    [v.turkish_only_tb.toFixed(2)+" TB", "yalnız Türkçe (" + v.turkish_only_n + " set)"],
-    [fmtN(c.by_modality.speech||0), "konuşma"],
-    [fmtN(c.by_modality.llm||0), "metin / LLM"],
-    [fmtN(c.by_modality.vision||0), "görüntü"],
-    [fmtN(c.by_posture.commercial||0), "ticari kullanıma açık"],
-  ].map(([n,l]) => `<div class="stat"><div class="n">${n}</div><div class="l">${esc(l)}</div></div>`).join("");
+    [c.total, fmtN(c.total), "veri kaynağı"],
+    [1, v.turkish_only_tb.toFixed(2)+" TB", "yalnız Türkçe (" + v.turkish_only_n + " set)"],
+    [c.by_modality.speech||0, fmtN(c.by_modality.speech||0), "konuşma"],
+    [c.by_modality.llm||0,    fmtN(c.by_modality.llm||0),    "metin / LLM"],
+    [c.by_modality.vision||0, fmtN(c.by_modality.vision||0), "görüntü"],
+    [c.by_posture.commercial||0, fmtN(c.by_posture.commercial||0), "ticari kullanıma açık"],
+  ].filter(r => r[0])
+   .map(([,n,l]) => `<div class="stat"><div class="n">${n}</div><div class="l">${esc(l)}</div></div>`).join("");
 
   document.getElementById("method").textContent =
     `Boyutlar Hugging Face dataset-size ucundan ölçüldü, kart beyanından değil. Her bağlantı istendi. `
   + `Çokdilli korpuslar işaretli ve boyutları tüm dillerin boyutudur: ${v.multilingual_n} çokdilli set `
   + `birlikte ${v.multilingual_all_langs_tb.toFixed(0)} TB tutuyor, oysa gerçekten tek-dilli Türkçe veri `
-  + `${v.turkish_only_tb.toFixed(2)} TB.`;
+  + `${v.turkish_only_tb.toFixed(2)} TB.`
+  + ((m.upcoming || []).length
+      ? ` Katalog aşamalı yayınlanıyor: `
+        + m.upcoming.map(u => `${u.label} — ${u.title} (${u.n} kayıt)`).join(", ") + `.`
+      : "");
+
+  const soon = {};
+  (m.upcoming || []).forEach(u => u.modalities.forEach(k => soon[k] = u));
 
   document.getElementById("segs").innerHTML = ORDER
-    .filter(k => c.by_modality[k])
+    .filter(k => c.by_modality[k] || soon[k])
+    .sort((a,b) => (soon[a] ? soon[a].stage : 0) - (soon[b] ? soon[b].stage : 0))
     .map(k => {
+      if (!c.by_modality[k]) {                       // henuz yayinlanmadi
+        const u = soon[k];
+        return `<div class="seg soon">
+          <h3>${MOD[k].tr}<span class="en">${MOD[k].en}</span><span class="n">${u.n}</span></h3>
+          <p>${MOD[k].blurb}</p>
+          <div class="soonbadge">${esc(u.label)} ile geliyor</div></div>`;
+      }
       const rel = (MOD[k].links || [])
         .map(l => `<a href="${l[1]}" target="_blank" rel="noopener">${l[0]} \u2197</a>`).join("");
       return `<div class="seg">

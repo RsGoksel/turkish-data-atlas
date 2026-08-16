@@ -14,7 +14,18 @@ license: mit
 Türkçe konuşma, görüntü ve metin veri setlerinin tek yerden, **doğrulanmış** dizini.
 A single verified index of Turkish speech, vision and text datasets.
 
-**345 kaynak** · 286 Hugging Face + 59 GitHub / kurum / web · doğrulama 2026-08-16
+**v1 — Konuşma: 147 kaynak** · doğrulama 2026-08-16
+
+Katalog aşamalı yayınlanıyor. Tümü doğrulandı ve
+[`datasets.full.json`](datasets.full.json) içinde duruyor; sayfaya bölüm bölüm açılıyor.
+
+| sürüm | bölüm | kayıt | durum |
+|---|---|---:|---|
+| **v1** | Konuşma (ASR, TTS) | 147 | **yayında** |
+| v2 | Metin / LLM | 184 | sırada |
+| v3 | Görüntü (OCR, VQA) | 14 | sırada, ayrıca genişletilecek |
+
+Yayına açmak için: `python tools/release.py --stage 2`
 
 ## Neden bir liste daha
 
@@ -29,18 +40,19 @@ Mevcut listeler kartın iddia ettiği sayıyı kopyalıyor. Buradaki her rakam �
 
 ## Kapsam
 
-| kategori | kayıt |
-|---|---:|
-| Konuşma (ASR, TTS) | 147 |
-| Metin / LLM | 184 |
-| Görüntü (OCR, VQA) | 14 |
+Doğrulanmış toplam **345 kaynak** — 286 Hugging Face deposu, 59 GitHub / kurum / web
+kaynağı. Sayfada o an yayında olan bölüm gösterilir; tümü `datasets.full.json` içindedir.
 
-Görüntü tarafı şu an ince ve büyük ölçüde OCR ağırlıklı. Katkıya en açık bölüm orası.
+Görüntü tarafı ince ve büyük ölçüde OCR ağırlıklı. Katkıya en açık bölüm orası, ve v3
+yalnızca mevcut kayıtları açmakla kalmayıp o boşluğu doldurmayı hedefliyor.
 
 ## Veri
 
-Katalogun tamamı tek dosyada: [`datasets.json`](datasets.json). Sayfa onu render eder,
-dolayısıyla yeni bir veri seti eklemek bir JSON kaydı eklemek demektir.
+İki dosya var. [`datasets.full.json`](datasets.full.json) doğrulanmış katalogun tamamını
+tutar ve hiç küçülmez; her kayıtta bir `release` alanı vardır.
+[`datasets.json`](datasets.json) ise sayfanın okuduğu, o anki sürüme kadar açılmış olan
+alt kümedir ve `tools/release.py` tarafından üretilir. Yeni bir veri seti eklemek, tam
+dosyaya bir JSON kaydı eklemek demektir.
 
 Her kayıt: `id · url · host · modality · task · desc · license · posture · bytes · rows ·
 downloads · multilingual · n_langs · verified`.
