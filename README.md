@@ -14,20 +14,33 @@ license: mit
 Türkçe konuşma, görüntü ve metin veri setlerinin tek yerden, **doğrulanmış** dizini.
 A single verified index of Turkish speech, vision and text datasets.
 
-**v1 — 115 kaynak** · doğrulama 2026-08-16
+**v1 — 116 kaynak · 1,29 TB** · doğrulama 2026-08-16
 
-Atlas sürüm sürüm büyüyor. Doğrulanmış katalogun tamamı
-[`datasets.full.json`](datasets.full.json) içinde; sayfa o anki sürüme kadar açılmış
-kaydı gösterir.
+| sürüm | kayıt | dili Türkçe beyan edilmiş | konuşma | metin / LLM | görüntü |
+|---|---:|---:|---:|---:|---:|
+| **v1** | **116** | **1,29 TB** | 52 | 52 | 12 |
+| v2 | 226 | 1,76 TB | 107 | 107 | 12 |
+| v3 | 336 | 1,78 TB | 143 | 181 | 12 |
 
-| sürüm | kayıt | konuşma | metin / LLM | görüntü |
-|---|---:|---:|---:|---:|
-| **v1** | **115** | 49 | 61 | 5 |
-| v2 | 230 | 98 | 123 | 9 |
-| v3 | 345 | 147 | 184 | 14 |
+Sonraki sürümü açmak: `python tools/release.py --stage 2`
 
-Her sürümde üç bölüm de büyür; sıralama indirme sayısına göre, yani en çok kullanılanlar
-ilk sürümde. Bir sonrakini açmak: `python tools/release.py --stage 2`
+## Hacim üç kovaya ayrılır
+
+Bu ayrım katalogun asıl işi. Tek bir "toplam TB" rakamı yanıltıcı olur:
+
+| kova | set | hacim |
+|---|---:|---:|
+| dili yalnızca `tr` beyan edilmiş | 70 | **1,78 TB** |
+| dil beyanı hiç olmayan | 54 | 0,39 TB |
+| çokdilli, Türkçe içeren | 122 | 153 TB — *tüm dillerin*, Türkçe payı ayrıştırılamıyor |
+
+Dili beyan edilmiş Türkçe veri 1,78 TB. Ham toplam 155 TB görünür, ama o hacmin
+neredeyse tamamı FineWeb2, HPLT, CulturaX gibi çokdilli korpuslardır ve Türkçe payı
+bu setlerden ayrıştırılamaz.
+
+Ayrıca dili Türkçe içermediği doğrulanan 9 kayıt katalogdan çıkarıldı — aralarında
+2,12 TB'lık `MLCommons/peoples_speech` (İngilizce) ve `facebook/voxpopuli` (16 AB dili,
+Türkçe yok) vardı. Bunlar Türkçe kataloglarında dolaşıyordu.
 
 ## Neden bir liste daha
 

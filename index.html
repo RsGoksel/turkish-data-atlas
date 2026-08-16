@@ -162,8 +162,9 @@ footer{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid 
   </select>
   <select id="flang">
     <option value="" data-s="lang"></option>
-    <option value="mono" data-s="lang_m"></option>
+    <option value="tr" data-s="lang_m"></option>
     <option value="multi" data-s="lang_x"></option>
+    <option value="untagged" data-s="lang_u"></option>
   </select>
   <select id="fhost">
     <option value="" data-s="host"></option>
@@ -225,8 +226,9 @@ const STR = {
   lic_n:   {tr:"ticari-olmayan", en:"non-commercial"},
   lic_u:   {tr:"doğrulanamadı", en:"unverified"},
   lang:    {tr:"dil: hepsi", en:"language: all"},
-  lang_m:  {tr:"yalnız Türkçe", en:"Turkish only"},
+  lang_m:  {tr:"dili Türkçe beyan edilmiş", en:"declared Turkish-only"},
   lang_x:  {tr:"çokdilli (Türkçe içeren)", en:"multilingual (includes Turkish)"},
+  lang_u:  {tr:"dil beyanı olmayan", en:"no language declared"},
   host:    {tr:"kaynak: hepsi", en:"source: all"},
   host_x:  {tr:"GitHub / web / kurum", en:"GitHub / web / institution"},
   shown:   {tr:(a,b)=>`${a} / ${b} kayıt gösteriliyor`, en:(a,b)=>`showing ${a} of ${b} records`},
@@ -237,21 +239,24 @@ const STR = {
   th:      {tr:["ad","açıklama","boyut","satır","lisans","indirme"],
             en:["name","description","size","rows","licence","downloads"]},
   ml:      {tr:"çokdilli", en:"multilingual"},
+  untag:   {tr:"dil beyanı yok", en:"no language tag"},
   st_total:{tr:"veri kaynağı", en:"data sources"},
-  st_tr:   {tr:n=>`yalnız Türkçe (${n} set)`, en:n=>`Turkish only (${n} sets)`},
+  st_tr:   {tr:n=>`dili Türkçe beyan edilmiş (${n} set)`, en:n=>`declared Turkish-only (${n} sets)`},
   st_sp:   {tr:"konuşma", en:"speech"},
   st_llm:  {tr:"metin / LLM", en:"text / LLM"},
   st_vi:   {tr:"görüntü", en:"vision"},
   st_com:  {tr:"ticari kullanıma açık", en:"commercial use allowed"},
-  method:  {tr:(v)=>`Boyutlar Hugging Face dataset-size ucundan ölçüldü, kart beyanından değil. `
-            + `Her bağlantı istendi. Çokdilli korpuslar işaretli ve boyutları tüm dillerin `
-            + `boyutudur: ${v.multilingual_n} çokdilli set birlikte ${v.multilingual_all_langs_tb.toFixed(0)} TB `
-            + `tutuyor, oysa gerçekten tek-dilli Türkçe veri ${v.turkish_only_tb.toFixed(2)} TB.`,
+  method:  {tr:(v)=>`Boyutlar Hugging Face dataset-size ucundan ölçüldü, kart beyanından değil; `
+            + `her bağlantı istendi. Dili yalnızca Türkçe olarak beyan edilmiş ${v.turkish_only_n} set `
+            + `${v.turkish_only_tb.toFixed(2)} TB tutuyor. Ayrıca ${v.untagged_n} set dilini hiç beyan `
+            + `etmiyor (${v.untagged_tb.toFixed(2)} TB) ve ${v.multilingual_n} çokdilli set birlikte `
+            + `${v.multilingual_all_langs_tb.toFixed(0)} TB — ama o hacim tüm dillerin, Türkçe payı ayrıştırılamıyor.`,
             en:(v)=>`Sizes were measured through the Hugging Face dataset-size endpoint rather than `
-            + `copied from cards, and every link was requested. Multilingual corpora are flagged and `
-            + `their size covers all languages: ${v.multilingual_n} such sets come to `
-            + `${v.multilingual_all_langs_tb.toFixed(0)} TB together, whereas genuinely `
-            + `Turkish-only data is ${v.turkish_only_tb.toFixed(2)} TB.`},
+            + `copied from cards, and every link was requested. The ${v.turkish_only_n} sets that declare `
+            + `Turkish as their only language come to ${v.turkish_only_tb.toFixed(2)} TB. A further `
+            + `${v.untagged_n} sets declare no language at all (${v.untagged_tb.toFixed(2)} TB), and `
+            + `${v.multilingual_n} multilingual sets come to ${v.multilingual_all_langs_tb.toFixed(0)} TB `
+            + `across all languages, with the Turkish share not separable.`},
   foot:    {tr:d=>`Bağlantılar ${d} tarihinde doğrulandı. Eksik ya da eski bilgi için `
             + `<a href="https://github.com/RsGoksel/turkish-data-atlas" target="_blank" rel="noopener">GitHub'da PR açabilirsiniz</a>.`,
             en:d=>`Links were verified on ${d}. For anything missing or out of date you can `
@@ -312,7 +317,8 @@ function head(m){
 function row(d){
   const cls = POSTC[d.posture] || POSTC.unverified;
   const lbl = (POSTL[d.posture] || POSTL.unverified)[LANG];
-  const ml = d.multilingual ? ` <span class="chip c-ml">${T("ml")}</span>` : "";
+  const ml = d.lang_status === "multi"     ? ` <span class="chip c-ml">${T("ml")}</span>`
+           : d.lang_status === "untagged" ? ` <span class="chip c-un">${T("untag")}</span>` : "";
   const gt = d.gated ? ' <span class="chip c-un">gated</span>' : "";
   return `<tr>
     <td><a class="name" href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.id)}</a>${ml}${gt}</td>
@@ -333,8 +339,7 @@ function render(){
   const filtering = !!(q || fp || fl || fh);
   const keep = DATA.datasets.filter(d => {
     if (fp && d.posture !== fp) return false;
-    if (fl === "mono"  && d.multilingual) return false;
-    if (fl === "multi" && !d.multilingual) return false;
+    if (fl && d.lang_status !== fl) return false;
     if (fh === "huggingface" && d.host !== "huggingface") return false;
     if (fh === "external"    && d.host === "huggingface") return false;
     if (q && !((d.id+" "+d.desc+" "+d.task+" "+(d.license||"")).toLowerCase().includes(q))) return false;
