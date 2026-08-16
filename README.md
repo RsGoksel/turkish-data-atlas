@@ -31,8 +31,8 @@ Mevcut listeler kartın iddia ettiği sayıyı kopyalıyor. Buradaki her rakam �
 
 | kategori | kayıt |
 |---|---:|
-| Konuşma (ASR, TTS) | 133 |
-| Metin / LLM | 198 |
+| Konuşma (ASR, TTS) | 147 |
+| Metin / LLM | 184 |
 | Görüntü (OCR, VQA) | 14 |
 
 Görüntü tarafı şu an ince ve büyük ölçüde OCR ağırlıklı. Katkıya en açık bölüm orası.
