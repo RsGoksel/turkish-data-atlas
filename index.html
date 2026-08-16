@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Turkish Dataset Index</title>
+<style>
+:root{
+  --bg:#f7f7f8; --panel:#ffffff; --ink:#16181d; --muted:#6b7280; --line:#e6e7ea;
+  --accent:#1d5fd4; --accent-soft:#e3ecfb; --good:#0f7b4e; --good-soft:#e3f3ea;
+  --warn:#b45309; --warn-soft:#fdf0dd; --susp:#8a8f98; --chip:#eef0f3;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0c0e12; --panel:#14171d; --ink:#e9ebef; --muted:#9aa1ad; --line:#242832;
+  --accent:#5c9dff; --accent-soft:#182740; --good:#37d18f; --good-soft:#123026;
+  --warn:#f0a94b; --warn-soft:#332413; --susp:#7a818d; --chip:#1d212a;
+}}
+:root[data-theme="light"]{--bg:#f7f7f8;--panel:#fff;--ink:#16181d;--muted:#6b7280;--line:#e6e7ea;--accent:#1d5fd4;--accent-soft:#e3ecfb;--good:#0f7b4e;--good-soft:#e3f3ea;--warn:#b45309;--warn-soft:#fdf0dd;--susp:#8a8f98;--chip:#eef0f3}
+:root[data-theme="dark"]{--bg:#0c0e12;--panel:#14171d;--ink:#e9ebef;--muted:#9aa1ad;--line:#242832;--accent:#5c9dff;--accent-soft:#182740;--good:#37d18f;--good-soft:#123026;--warn:#f0a94b;--warn-soft:#332413;--susp:#7a818d;--chip:#1d212a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1360px;margin:0 auto;padding:24px 22px 90px}
+header.h{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{font-size:30px;line-height:1}
+h1{font-size:23px;font-weight:700;margin:0;letter-spacing:-.2px}
+.tag{margin-top:6px;font-size:14px;max-width:760px}
+.tag .en{color:var(--muted);font-size:.93em;margin-top:3px}
+.links{font-size:13.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.themebtn{background:var(--chip);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:14px 16px;font-size:13.5px;margin-bottom:16px}
+.note p{margin:0} .note p+p{margin-top:10px} .note b{color:var(--accent)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:132px}
+.stat .n{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+.stat .l{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+input[type=search],select{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:13.5px;font-family:inherit}
+input[type=search]{min-width:260px}
+.hint{font-size:12.5px;color:var(--muted)}
+details.sec{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+details.sec>summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary .ico{font-size:18px}
+details.sec>summary .cnt{margin-left:auto;font-weight:600;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+details.sec>summary:hover{color:var(--accent)}
+details.sec[open]>summary{border-bottom:1px solid var(--line)}
+.subhead{padding:12px 16px 4px;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:600}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:900px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:600;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr:hover{background:color-mix(in srgb,var(--accent) 6%,transparent)}
+.name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;white-space:nowrap}
+.desc{color:var(--muted);font-size:12.5px;max-width:560px}
+.chip{display:inline-block;border-radius:999px;padding:1px 8px;font-size:11px;font-weight:600;white-space:nowrap;border:1px solid transparent}
+.c-ok{background:var(--good-soft);color:var(--good)}
+.c-nc{background:var(--warn-soft);color:var(--warn)}
+.c-un{background:var(--chip);color:var(--susp)}
+.c-ml{background:var(--accent-soft);color:var(--accent)}
+.empty{padding:26px 16px;color:var(--muted);font-size:13.5px}
+footer{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="h">
+  <div class="brand">
+    <div class="logo">🗂️</div>
+    <div>
+      <h1>Turkish Dataset Index</h1>
+      <div class="tag">
+        Türkçe konuşma, görüntü ve metin veri setlerinin tek yerden, <b>doğrulanmış</b> dizini.
+        <div class="en">A single verified index of Turkish speech, vision and text datasets.</div>
+      </div>
+    </div>
+  </div>
+  <div class="links">
+    <span id="verified"></span>
+    <a href="https://github.com/RsGoksel/turkish-dataset-index" target="_blank" rel="noopener">GitHub · katkı / contribute</a>
+    <a href="https://huggingface.co/spaces/RsGoksel/turkish-asr-benchmark-stt" target="_blank" rel="noopener">TurkSpeak Bench</a>
+    <button class="themebtn" id="themebtn" type="button">tema</button>
+  </div>
+</header>
+
+<div class="note">
+  <p><b>Neden bir liste daha?</b> Çünkü mevcut listeler kartın iddia ettiği sayıyı kopyalıyor. Buradaki
+  her boyut Hugging Face'in <i>dataset-size</i> ucundan çekildi, kart beyanından değil. Her bağlantı
+  istendi; ölü olanlar listeye girmedi. Çokdilli korpuslar işaretli ve boyutları
+  <b>tüm dillerin</b> boyutudur, Türkçe bölümünün değil — bu ayrım yapılmadığında toplam 158 TB
+  görünüyor, oysa gerçekten tek-dilli Türkçe veri 4,3 TB.</p>
+  <p><b>Lisans duruşu</b> her satırda: ticari kullanıma açık, ticari-olmayan, ya da doğrulanamadı.
+  İnsanların başını yakan şey genelde bu sütun.</p>
+  <p class="en" style="color:var(--muted)"><b>Why another list?</b> Sizes here come from the Hugging Face
+  dataset-size endpoint rather than from card claims, every link was requested, and multilingual
+  corpora are flagged so their all-language size is not mistaken for Turkish volume. Licence posture
+  is given per row.</p>
+</div>
+
+<div class="stats" id="stats"></div>
+
+<div class="controls">
+  <input type="search" id="q" placeholder="ara / search — ad, açıklama, görev…" autocomplete="off">
+  <select id="fposture">
+    <option value="">lisans: hepsi</option>
+    <option value="commercial">ticari kullanıma açık</option>
+    <option value="non-commercial">ticari-olmayan</option>
+    <option value="unverified">doğrulanamadı</option>
+  </select>
+  <select id="flang">
+    <option value="">dil: hepsi</option>
+    <option value="mono">yalnız Türkçe</option>
+    <option value="multi">çokdilli (Türkçe içeren)</option>
+  </select>
+  <select id="fhost">
+    <option value="">kaynak: hepsi</option>
+    <option value="huggingface">Hugging Face</option>
+    <option value="external">GitHub / web / kurum</option>
+  </select>
+  <span class="hint" id="shown"></span>
+</div>
+
+<div id="sections"></div>
+
+<footer>
+  <div>Boyutlar ve bağlantılar <span id="vdate"></span> tarihinde doğrulandı. Bir satır eskidiyse
+  ya da eksikse <a href="https://github.com/RsGoksel/turkish-dataset-index" target="_blank" rel="noopener">GitHub'da PR açın</a>.</div>
+  <div style="margin-top:6px">Kadir Göksel Gündüz · İstanbul Teknik Üniversitesi, Enerji Enstitüsü</div>
+</footer>
+</div>
+
+<script>
+const SRC = ["./datasets.json",
+  "https://raw.githubusercontent.com/RsGoksel/turkish-dataset-index/main/datasets.json"];
+const MOD = {
+  speech: {icon:"🎙️", tr:"Konuşma", en:"Speech"},
+  vision: {icon:"🖼️", tr:"Görüntü", en:"Computer Vision"},
+  llm:    {icon:"📝", tr:"Metin / LLM", en:"Text & LLM"},
+};
+const POST = {commercial:["c-ok","ticari OK"], "non-commercial":["c-nc","ticari değil"], unverified:["c-un","doğrulanamadı"]};
+let DATA = null;
+
+const fmtB = b => !b ? "—" :
+  b >= 1e12 ? (b/1e12).toFixed(2)+" TB" :
+  b >= 1e9  ? (b/1e9 ).toFixed(1)+" GB" :
+  b >= 1e6  ? (b/1e6 ).toFixed(0)+" MB" : (b/1e3).toFixed(0)+" kB";
+const fmtN = n => n == null ? "—" : n.toLocaleString("tr-TR");
+const esc  = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function stats(m){
+  const v = m.volume, c = m.counts;
+  const cards = [
+    [fmtN(c.total), "veri kaynağı"],
+    [v.turkish_only_tb.toFixed(2)+" TB", "yalnız Türkçe (" + v.turkish_only_n + " set)"],
+    [fmtN(c.by_modality.speech||0), "konuşma"],
+    [fmtN(c.by_modality.llm||0), "metin / LLM"],
+    [fmtN(c.by_modality.vision||0), "görüntü"],
+    [fmtN(c.by_posture.commercial||0), "ticari kullanıma açık"],
+  ];
+  document.getElementById("stats").innerHTML = cards
+    .map(([n,l]) => `<div class="stat"><div class="n">${n}</div><div class="l">${esc(l)}</div></div>`).join("");
+}
+
+function row(d){
+  const [cls,lbl] = POST[d.posture] || POST.unverified;
+  const ml = d.multilingual ? ' <span class="chip c-ml">çokdilli</span>' : "";
+  const gt = d.gated ? ' <span class="chip c-un">gated</span>' : "";
+  return `<tr>
+    <td><a class="name" href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.id)}</a>${ml}${gt}</td>
+    <td class="desc">${esc(d.desc)}</td>
+    <td class="num">${fmtB(d.bytes)}</td>
+    <td class="num">${fmtN(d.rows)}</td>
+    <td><span class="chip ${cls}">${esc(d.license || lbl)}</span></td>
+    <td class="num">${fmtN(d.downloads)}</td>
+  </tr>`;
+}
+
+function render(){
+  const q  = document.getElementById("q").value.trim().toLowerCase();
+  const fp = document.getElementById("fposture").value;
+  const fl = document.getElementById("flang").value;
+  const fh = document.getElementById("fhost").value;
+  const keep = DATA.datasets.filter(d => {
+    if (fp && d.posture !== fp) return false;
+    if (fl === "mono"  && d.multilingual) return false;
+    if (fl === "multi" && !d.multilingual) return false;
+    if (fh === "huggingface" && d.host !== "huggingface") return false;
+    if (fh === "external"    && d.host === "huggingface") return false;
+    if (q && !((d.id+" "+d.desc+" "+d.task+" "+(d.license||"")).toLowerCase().includes(q))) return false;
+    return true;
+  });
+  document.getElementById("shown").textContent =
+    `${keep.length} / ${DATA.datasets.length} kayıt gösteriliyor`;
+
+  const out = [];
+  for (const m of ["speech","vision","llm"]){
+    const rows = keep.filter(d => d.modality === m);
+    if (!rows.length) continue;
+    const byTask = {};
+    rows.forEach(d => (byTask[d.task] = byTask[d.task] || []).push(d));
+    const open = q || fp || fl || fh ? " open" : (m === "speech" ? " open" : "");
+    let body = "";
+    for (const t of Object.keys(byTask).sort((a,b) => byTask[b].length - byTask[a].length)){
+      body += `<div class="subhead">${esc(t)} · ${byTask[t].length}</div>
+        <div class="tablewrap"><table>
+        <thead><tr><th>ad</th><th>açıklama</th><th class="num">boyut</th>
+        <th class="num">satır</th><th>lisans</th><th class="num">indirme</th></tr></thead>
+        <tbody>${byTask[t].map(row).join("")}</tbody></table></div>`;
+    }
+    out.push(`<details class="sec"${open}>
+      <summary><span class="ico">${MOD[m].icon}</span> ${MOD[m].tr} <span style="color:var(--muted);font-weight:600">· ${MOD[m].en}</span>
+      <span class="cnt">${rows.length} kayıt</span></summary>${body}</details>`);
+  }
+  document.getElementById("sections").innerHTML =
+    out.join("") || `<div class="note empty">Bu filtrelerle kayıt yok.</div>`;
+}
+
+(async () => {
+  let last = "";
+  for (const u of SRC){
+    try { const r = await fetch(u); if (r.ok){ DATA = await r.json(); break; } last = r.status; }
+    catch(e){ last = e.message; }
+  }
+  if (!DATA){
+    document.getElementById("sections").innerHTML =
+      `<div class="note empty">Katalog yüklenemedi (${esc(String(last))}).</div>`;
+    return;
+  }
+  document.getElementById("verified").textContent = "doğrulama: " + DATA.meta.verified;
+  document.getElementById("vdate").textContent = DATA.meta.verified;
+  stats(DATA.meta);
+  render();
+  ["q","fposture","flang","fhost"].forEach(id =>
+    document.getElementById(id).addEventListener("input", render));
+})();
+
+const root = document.documentElement;
+document.getElementById("themebtn").addEventListener("click", () => {
+  const cur = root.getAttribute("data-theme")
+    || (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+  root.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+});
+</script>
+</body>
+</html>

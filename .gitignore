@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+verified.json
+extracted.json
+nonhf_raw.json
