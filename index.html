@@ -27,6 +27,8 @@ header.h{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:1
 .top{display:flex;align-items:flex-start;gap:18px}
 .top .txt{flex:1;min-width:0}
 h1{font-size:24px;font-weight:700;margin:0;letter-spacing:-.3px}
+.ver{font-size:12.5px;font-weight:700;color:var(--accent);background:var(--accent-soft);
+  border-radius:999px;padding:3px 10px;vertical-align:middle;margin-left:6px;letter-spacing:0}
 .tag{margin-top:5px;font-size:14px;max-width:760px}
 .tag .en{color:var(--muted);font-size:.93em;margin-top:2px}
 .themebtn{flex:none;background:var(--panel);border:1px solid var(--line);color:var(--ink);
@@ -56,10 +58,7 @@ h1{font-size:24px;font-weight:700;margin:0;letter-spacing:-.3px}
 .seg .go:hover{background:color-mix(in srgb,var(--accent) 18%,transparent)}
 .seg .go svg{width:14px;height:14px;animation:nudge 2.2s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.seg .go svg{animation:none}}
-.seg.soon{border-style:dashed;background:transparent}
-.seg.soon h3,.seg.soon p{opacity:.72}
-.seg .soonbadge{margin-top:13px;align-self:flex-start;background:var(--chip);color:var(--muted);
-  border-radius:9px;padding:7px 14px;font-size:12.5px;font-weight:700;letter-spacing:.2px}
+
 
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:132px}
@@ -122,7 +121,7 @@ footer{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid 
 <header class="h">
   <div class="top">
     <div class="txt">
-      <h1>Turkish Data Atlas</h1>
+      <h1>Turkish Data Atlas <span class="ver" id="ver"></span></h1>
       <div class="tag">
         Türkçe konuşma, görüntü ve metin veri setlerinin tek yerden, doğrulanmış dizini.
         <div class="en">A verified index of Turkish speech, vision and text datasets.</div>
@@ -231,26 +230,11 @@ function head(m){
     `Boyutlar Hugging Face dataset-size ucundan ölçüldü, kart beyanından değil. Her bağlantı istendi. `
   + `Çokdilli korpuslar işaretli ve boyutları tüm dillerin boyutudur: ${v.multilingual_n} çokdilli set `
   + `birlikte ${v.multilingual_all_langs_tb.toFixed(0)} TB tutuyor, oysa gerçekten tek-dilli Türkçe veri `
-  + `${v.turkish_only_tb.toFixed(2)} TB.`
-  + ((m.upcoming || []).length
-      ? ` Katalog aşamalı yayınlanıyor: `
-        + m.upcoming.map(u => `${u.label} — ${u.title} (${u.n} kayıt)`).join(", ") + `.`
-      : "");
-
-  const soon = {};
-  (m.upcoming || []).forEach(u => u.modalities.forEach(k => soon[k] = u));
+  + `${v.turkish_only_tb.toFixed(2)} TB.`;
 
   document.getElementById("segs").innerHTML = ORDER
-    .filter(k => c.by_modality[k] || soon[k])
-    .sort((a,b) => (soon[a] ? soon[a].stage : 0) - (soon[b] ? soon[b].stage : 0))
+    .filter(k => c.by_modality[k])
     .map(k => {
-      if (!c.by_modality[k]) {                       // henuz yayinlanmadi
-        const u = soon[k];
-        return `<div class="seg soon">
-          <h3>${MOD[k].tr}<span class="en">${MOD[k].en}</span><span class="n">${u.n}</span></h3>
-          <p>${MOD[k].blurb}</p>
-          <div class="soonbadge">${esc(u.label)} ile geliyor</div></div>`;
-      }
       const rel = (MOD[k].links || [])
         .map(l => `<a href="${l[1]}" target="_blank" rel="noopener">${l[0]} \u2197</a>`).join("");
       return `<div class="seg">
@@ -365,6 +349,7 @@ document.addEventListener("click", e => {
       `<div class="empty">Katalog yüklenemedi (${esc(String(last))}).</div>`;
     return;
   }
+  document.getElementById("ver").textContent = DATA.meta.version || "";
   document.getElementById("verified").textContent = "doğrulama: " + DATA.meta.verified;
   document.getElementById("vdate").textContent = DATA.meta.verified;
   head(DATA.meta);

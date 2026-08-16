@@ -26,27 +26,15 @@
   "releases": {
    "1": {
     "label": "v1",
-    "modalities": [
-     "speech"
-    ],
-    "title": "Konuşma",
-    "n": 147
+    "n": 115
    },
    "2": {
     "label": "v2",
-    "modalities": [
-     "llm"
-    ],
-    "title": "Metin / LLM",
-    "n": 184
+    "n": 115
    },
    "3": {
     "label": "v3",
-    "modalities": [
-     "vision"
-    ],
-    "title": "Görüntü",
-    "n": 14
+    "n": 115
    }
   }
  },
@@ -69,7 +57,7 @@
    "verified": "2026-08-16",
    "n_langs": 103,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "artur-muratov/multilingual-speech-commands-15lang",
@@ -89,7 +77,7 @@
    "verified": "2026-08-16",
    "n_langs": 15,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "wikimedia/wikipedia",
@@ -109,7 +97,7 @@
    "verified": "2026-08-16",
    "n_langs": 322,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "sarulab-speech/yodas2_sidon",
@@ -189,7 +177,7 @@
    "verified": "2026-08-16",
    "n_langs": 37,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "HuggingFaceFW/fineweb-2",
@@ -209,7 +197,7 @@
    "verified": "2026-08-16",
    "n_langs": 1813,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "espnet/yodas",
@@ -249,7 +237,7 @@
    "verified": "2026-08-16",
    "n_langs": 186,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "CohereLabs/xP3x",
@@ -269,7 +257,7 @@
    "verified": "2026-08-16",
    "n_langs": 220,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "ruggsea/infini-news-corpus",
@@ -289,7 +277,7 @@
    "verified": "2026-08-16",
    "n_langs": 52,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "HuggingFaceFW/finepdfs",
@@ -309,7 +297,7 @@
    "verified": "2026-08-16",
    "n_langs": 1810,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "MLCommons/peoples_speech",
@@ -349,7 +337,7 @@
    "verified": "2026-08-16",
    "n_langs": 70,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "Helsinki-NLP/nemotron-cc-translated",
@@ -369,7 +357,7 @@
    "verified": "2026-08-16",
    "n_langs": 37,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "CohereLabs/Global-MMLU",
@@ -389,7 +377,7 @@
    "verified": "2026-08-16",
    "n_langs": 42,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "wannaphong/wikipedia-monthly",
@@ -409,7 +397,7 @@
    "verified": "2026-08-16",
    "n_langs": 356,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "facebook/voxpopuli",
@@ -469,7 +457,7 @@
    "verified": "2026-08-16",
    "n_langs": 35,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "CohereLabs/aya_collection_language_split",
@@ -489,7 +477,7 @@
    "verified": "2026-08-16",
    "n_langs": 115,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "disco-eth/WorldSpeech",
@@ -529,7 +517,7 @@
    "verified": "2026-08-16",
    "n_langs": 20,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "multilingual-tts/open-bible",
@@ -569,7 +557,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 1
   },
   {
    "id": "CohereLabs/aya_dataset",
@@ -589,7 +577,7 @@
    "verified": "2026-08-16",
    "n_langs": 70,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "styletts2-community/multilingual-pl-bert",
@@ -609,7 +597,7 @@
    "verified": "2026-08-16",
    "n_langs": 69,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "openfoodfacts/product-database",
@@ -629,7 +617,7 @@
    "verified": "2026-08-16",
    "n_langs": 57,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "uonlp/CulturaX",
@@ -649,7 +637,7 @@
    "verified": "2026-08-16",
    "n_langs": 167,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "speechcolab/gigaspeech2",
@@ -689,7 +677,7 @@
    "verified": "2026-08-16",
    "n_langs": 55,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "MBZUAI/Bactrian-X",
@@ -709,7 +697,7 @@
    "verified": "2026-08-16",
    "n_langs": 51,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "CohereLabs/aya_collection",
@@ -729,7 +717,7 @@
    "verified": "2026-08-16",
    "n_langs": 115,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "mimir-lcm/fineweb-2-sentence-split",
@@ -749,7 +737,7 @@
    "verified": "2026-08-16",
    "n_langs": 44,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "stanford-oval/wikipedia",
@@ -769,7 +757,7 @@
    "verified": "2026-08-16",
    "n_langs": 25,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "OpenAssistant/oasst2",
@@ -789,7 +777,7 @@
    "verified": "2026-08-16",
    "n_langs": 35,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "epfml/FineWeb2-embedded",
@@ -809,7 +797,7 @@
    "verified": "2026-08-16",
    "n_langs": 20,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "HuggingFaceFW/finetranslations",
@@ -829,7 +817,7 @@
    "verified": "2026-08-16",
    "n_langs": 497,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "cis-lmu/GlotCC-V1",
@@ -849,7 +837,7 @@
    "verified": "2026-08-16",
    "n_langs": 1397,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "fsicoli/common_voice_17_0",
@@ -889,7 +877,7 @@
    "verified": "2026-08-16",
    "n_langs": 45,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "HPLT/DocHPLT",
@@ -909,7 +897,7 @@
    "verified": "2026-08-16",
    "n_langs": 50,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "papluca/language-identification",
@@ -929,7 +917,7 @@
    "verified": "2026-08-16",
    "n_langs": 20,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "Centi234/WorldSpeech",
@@ -969,7 +957,7 @@
    "verified": "2026-08-16",
    "n_langs": 94,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "McGill-NLP/speech-translation-and-summarization",
@@ -1009,7 +997,7 @@
    "verified": "2026-08-16",
    "n_langs": 69,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "wikimedia/wit_base",
@@ -1029,7 +1017,7 @@
    "verified": "2026-08-16",
    "n_langs": 105,
    "multilingual": true,
-   "release": 3
+   "release": 1
   },
   {
    "id": "RidheshBhati/STT_MODEL",
@@ -1049,7 +1037,7 @@
    "verified": "2026-08-16",
    "n_langs": 44,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "tascib/turkish-llm-dataset",
@@ -1069,7 +1057,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 1
   },
   {
    "id": "CohereLabs/include-base-44",
@@ -1089,7 +1077,7 @@
    "verified": "2026-08-16",
    "n_langs": 44,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "omarkamali/wikipedia-monthly",
@@ -1109,7 +1097,7 @@
    "verified": "2026-08-16",
    "n_langs": 356,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "Yqy6/Slides-Align",
@@ -1129,7 +1117,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 3
+   "release": 1
   },
   {
    "id": "mozilla-foundation/common_voice_17_0",
@@ -1189,7 +1177,7 @@
    "verified": "2026-08-16",
    "n_langs": 75,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "FBK-MT/Speech-MASSIVE",
@@ -1229,7 +1217,7 @@
    "verified": "2026-08-16",
    "n_langs": 89,
    "multilingual": true,
-   "release": 3
+   "release": 1
   },
   {
    "id": "mhardalov/exams",
@@ -1249,7 +1237,7 @@
    "verified": "2026-08-16",
    "n_langs": 16,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "allenai/Dolci-Instruct-SFT",
@@ -1269,7 +1257,7 @@
    "verified": "2026-08-16",
    "n_langs": 70,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "takuM23/multilingual_audio_alignments",
@@ -1329,7 +1317,7 @@
    "verified": "2026-08-16",
    "n_langs": 340,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "ayymen/Weblate-Translations",
@@ -1349,7 +1337,7 @@
    "verified": "2026-08-16",
    "n_langs": 285,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "Viet-Mistral/CulturaY",
@@ -1369,7 +1357,7 @@
    "verified": "2026-08-16",
    "n_langs": 75,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "cis-lmu/Glot500",
@@ -1389,7 +1377,7 @@
    "verified": "2026-08-16",
    "n_langs": 389,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "allenai/tulu-3-sft-olmo-2-mixture",
@@ -1409,7 +1397,7 @@
    "verified": "2026-08-16",
    "n_langs": 70,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "Tamazight-NLP/Weblate-Translations",
@@ -1429,7 +1417,7 @@
    "verified": "2026-08-16",
    "n_langs": 380,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "md-nishat-008/mHumanEval-Benchmark",
@@ -1449,7 +1437,7 @@
    "verified": "2026-08-16",
    "n_langs": 184,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "TalTechNLP/voxlingua107_wds",
@@ -1489,7 +1477,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 1
   },
   {
    "id": "MartinThoma/wili_2018",
@@ -1509,7 +1497,7 @@
    "verified": "2026-08-16",
    "n_langs": 232,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "CohereLabs/aya_evaluation_suite",
@@ -1529,7 +1517,7 @@
    "verified": "2026-08-16",
    "n_langs": 101,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "Eurolingua/hplt3_edu_scores",
@@ -1549,7 +1537,7 @@
    "verified": "2026-08-16",
    "n_langs": 33,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "codefuse-ai/F2LLM-v2",
@@ -1569,7 +1557,7 @@
    "verified": "2026-08-16",
    "n_langs": 87,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "mrlbenchmarks/global-piqa-parallel",
@@ -1589,7 +1577,7 @@
    "verified": "2026-08-16",
    "n_langs": 204,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "toksuitebackup/meta-llama-Llama-3.2-1B-toksuite-detokenized",
@@ -1609,7 +1597,7 @@
    "verified": "2026-08-16",
    "n_langs": 5,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "turkish-nlp-suite/BellaTurca",
@@ -1629,7 +1617,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 1
   },
   {
    "id": "AAdonis/multilingual_audio_alignments",
@@ -1709,7 +1697,7 @@
    "verified": "2026-08-16",
    "n_langs": 1397,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "graelo/wikipedia",
@@ -1729,7 +1717,7 @@
    "verified": "2026-08-16",
    "n_langs": 316,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "Upstash/wikipedia-2024-06-bge-m3",
@@ -1749,7 +1737,7 @@
    "verified": "2026-08-16",
    "n_langs": 11,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "mteb/flores",
@@ -1769,7 +1757,7 @@
    "verified": "2026-08-16",
    "n_langs": 196,
    "multilingual": true,
-   "release": 2
+   "release": 1
   },
   {
    "id": "altaidevorg/fineweb-2-turkish-categorized",
@@ -1929,7 +1917,7 @@
    "verified": "2026-08-16",
    "n_langs": 3,
    "multilingual": true,
-   "release": 3
+   "release": 1
   },
   {
    "id": "lightonai/LightOnOCR-mix-0126",
@@ -1949,7 +1937,7 @@
    "verified": "2026-08-16",
    "n_langs": 20,
    "multilingual": true,
-   "release": 3
+   "release": 1
   },
   {
    "id": "Scicom-intl/semantic-vad-eot",
@@ -2089,7 +2077,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 3
+   "release": 2
   },
   {
    "id": "FluidInference/fleurs-full",
@@ -2209,7 +2197,7 @@
    "verified": "2026-08-16",
    "n_langs": 16,
    "multilingual": true,
-   "release": 3
+   "release": 2
   },
   {
    "id": "Dxniz/TinyStories-Multilingual",
@@ -2289,7 +2277,7 @@
    "verified": "2026-08-16",
    "n_langs": 36,
    "multilingual": true,
-   "release": 3
+   "release": 2
   },
   {
    "id": "AlicanKiraz0/Agentic-Chain-of-Thought-Coding-SFT-Dataset",
@@ -2429,7 +2417,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 3
+   "release": 2
   },
   {
    "id": "hasankursun/multilingual-safety-classification-dataset",
@@ -3669,7 +3657,7 @@
    "verified": "2026-08-16",
    "n_langs": 7,
    "multilingual": true,
-   "release": 2
+   "release": 3
   },
   {
    "id": "yt-data-1/Turkis-Podcast-4",
@@ -3709,7 +3697,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Anilosan15/Synthetic_Turkish_TTS_Data",
@@ -3749,7 +3737,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "yt-data-1/Turkish-Podcast-1",
@@ -3789,7 +3777,7 @@
    "verified": "2026-08-16",
    "n_langs": 7,
    "multilingual": true,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Codyfederer/tr-combined",
@@ -3829,7 +3817,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/orca_dpo_pairs-tr",
@@ -3849,7 +3837,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "trmteb/tquad",
@@ -3869,7 +3857,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "omersaidd/tts_nisan_kumru_tur",
@@ -3889,7 +3877,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "alibayram/Bilge-Turkish-CoT-50K",
@@ -3909,7 +3897,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "ytu-ce-cosmos/gsm8k_tr",
@@ -3929,7 +3917,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "yusufbaykaloglu/Turkish-STEM-DPO-Dataset",
@@ -3949,7 +3937,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/hellaswag_tr-v0.2",
@@ -3969,7 +3957,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "newmindai/contract-retrieval",
@@ -3989,7 +3977,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/arc-tr-v0.2",
@@ -4009,7 +3997,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/truthful_qa-tr-v0.2",
@@ -4029,7 +4017,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "yt-data-1/Turkish-Podcast-14",
@@ -4049,7 +4037,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "enes1863/turkish-foreigners-labor-law-benchmark",
@@ -4069,7 +4057,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "erenfazlioglu/turkish-instruct-reasoning-dpo-3.4m",
@@ -4089,7 +4077,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "ytu-ce-cosmos/tubitak-science-olympiad-tr",
@@ -4129,7 +4117,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "malhajar/alpaca-evol-instruct-turkish",
@@ -4149,7 +4137,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/winogrande-tr-v0.2",
@@ -4169,7 +4157,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "ysdede/khanacademy-turkish-math",
@@ -4189,7 +4177,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/tts_mazlum_kiper_tur",
@@ -4209,7 +4197,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "ytu-ce-cosmos/aime24-tr",
@@ -4229,7 +4217,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "DataoceanAI/Off_the_self_dataset",
@@ -4249,7 +4237,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "goktugozkanmd/medfailbench-v02-prompts",
@@ -4269,7 +4257,7 @@
    "verified": "2026-08-16",
    "n_langs": 2,
    "multilingual": true,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/truthfull_qa-tr",
@@ -4289,7 +4277,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/alpaca-gpt4-tr",
@@ -4309,7 +4297,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "yt-data-1/Turkish-Podcast-2",
@@ -4329,7 +4317,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "Mustafa2735/iik-bench",
@@ -4349,7 +4337,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "senemde/saglik-benchmark-coktan-secmeli",
@@ -4369,7 +4357,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Anilosan15/YouTube_Video_Transkriptleri_TR",
@@ -4389,7 +4377,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "shunyalabs/turkish-speech-dataset",
@@ -4409,7 +4397,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "umarigan/openhermespreference_tr",
@@ -4429,7 +4417,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "kilicai/turkish-gsm8k-math-15k",
@@ -4449,7 +4437,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "umarigan/GPTeacher-General-Instruct-tr",
@@ -4469,7 +4457,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "suayptalha/Turkish-DPO-Pairs",
@@ -4489,7 +4477,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "alibayram/turkish-hospital-medical-articles",
@@ -4509,7 +4497,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "umutkkgz/tr-full-dataset",
@@ -4529,7 +4517,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "malhajar/distilabel-intel-orca-dpo-pairs-tr",
@@ -4549,7 +4537,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Codyfederer/goodforft",
@@ -4569,7 +4557,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "seali/turkce-saglik-benchmark",
@@ -4589,7 +4577,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "malhajar/results_v0.2",
@@ -4609,7 +4597,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "atasoglu/turklegal-llm-bench",
@@ -4629,7 +4617,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "omersaidd/tts_murat_eken",
@@ -4649,7 +4637,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "afkfatih/turkish-tts-snac-tokenized",
@@ -4669,7 +4657,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "zypchn/TUS21-exams",
@@ -4689,7 +4677,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Speech-data/Turkish-Speech-Dataset",
@@ -4709,7 +4697,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "malhajar/gsm1k-tr",
@@ -4729,7 +4717,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "umarigan/OpenThoughts-43k-TR",
@@ -4749,7 +4737,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "IremTRNL/TurkLegalBench",
@@ -4769,7 +4757,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "umarigan/openhermes_tr",
@@ -4789,7 +4777,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "ytu-ce-cosmos/gpqa-extended_tr",
@@ -4809,7 +4797,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "arda-argmax/common_voice_17_0_tr_pseudo_labelled",
@@ -4829,7 +4817,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "ilkerkara/common_voice_13_0_tr_pseudo_labelled",
@@ -4849,7 +4837,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/tts_tur_kip",
@@ -4869,7 +4857,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "hzfokyn/tck-qa-benchmark",
@@ -4889,7 +4877,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "LawChatAI/turkish-legal-statutory-hallucination-benchmark",
@@ -4909,7 +4897,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "falan42/Turkish-Mert-H-tts-dataset",
@@ -4929,7 +4917,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "alimetin/turkish-parliament-speech",
@@ -4949,7 +4937,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "patrickvonplaten/common_voice_6_tr",
@@ -4969,7 +4957,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "yusufbaykaloglu/Turkish-Legislation-DPO",
@@ -4989,7 +4977,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Karayakar/OprheusTTs10k",
@@ -5009,7 +4997,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "afkfatih/derya-tts",
@@ -5029,7 +5017,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "afkfatih/derya-tts-v2",
@@ -5049,7 +5037,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "alibayram/doktorsitesi",
@@ -5069,7 +5057,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "omersaidd/tts_turkce_kiper",
@@ -5089,7 +5077,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "rje-turkish-reasoning/rje-dpo-dataset",
@@ -5109,7 +5097,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "umarigan/deepseek-r1-reasoning-prompts",
@@ -5129,7 +5117,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Kamyar-zeinalipour/Turkish-Quiz-Instruct",
@@ -5149,7 +5137,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "ardagunsuren/turkish-voice-dataset",
@@ -5169,7 +5157,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "falan42/Turkish-Bentropi-tts-dataset",
@@ -5189,7 +5177,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "umarigan/turkiye_finance_qa",
@@ -5209,7 +5197,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Thomcles/YodaLingua-Turkish",
@@ -5229,7 +5217,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "falan42/Turkish-Tunc_M-tts-dataset",
@@ -5249,7 +5237,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/mazlum_kiper_piper_tts",
@@ -5269,7 +5257,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "mukahraman/orpheus-tts-turkish-mozilla17-test",
@@ -5289,7 +5277,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "umarigan/rm_instruct_helpful_preferences_tr",
@@ -5309,7 +5297,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "Anilosan15/Nano_Codec_Nisan_Kumru",
@@ -5329,7 +5317,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "afkfatih/turkish-tts-snac-tokenized-vyvo",
@@ -5349,7 +5337,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "daniel-dona/openslr-slr108",
@@ -5369,7 +5357,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "TurkishCodeMan/tts-medium-clean",
@@ -5389,7 +5377,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/nisan_kumru_piper_tts",
@@ -5409,7 +5397,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "selimc/orpo-dpo-mix-TR-20k",
@@ -5429,7 +5417,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "afkfatih/mazlum-tts-snac-tokenized",
@@ -5449,7 +5437,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/style_dataset_murat",
@@ -5469,7 +5457,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "yuserabv/turkish_tts",
@@ -5489,7 +5477,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "mukahraman/orpheus-tts-turkish-mozilla17",
@@ -5509,7 +5497,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "oati41/Turkish-Mert-H-tts-dataset",
@@ -5529,7 +5517,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/styletts2_dataset",
@@ -5549,7 +5537,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "Codyfederer/tr-podcast-dataset",
@@ -5569,7 +5557,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "alibayram/hukuk_soru_cevap",
@@ -5589,7 +5577,7 @@
    "verified": "2026-08-16",
    "n_langs": 1,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "alibayram/tr-books",
@@ -5609,7 +5597,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "barandinho/orpo-dpo-mix-turkish-translated-mini",
@@ -5629,7 +5617,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "hasancanonder/turkish-dpo-250k",
@@ -5649,7 +5637,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 2
+   "release": 3
   },
   {
    "id": "omersaidd/piper_tts_murat_eken_v0",
@@ -5669,7 +5657,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/piper_tts_kiper",
@@ -5689,7 +5677,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "fcanercan/common_voice_14_tr",
@@ -5709,7 +5697,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "omersaidd/mazlum_kiper_styletts2",
@@ -5729,7 +5717,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "Sercan/common_voice_17_0_tr_pseudo_labelled",
@@ -5749,7 +5737,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "kerembe/augmented-common-voice-17-tr",
@@ -5769,7 +5757,7 @@
    "verified": "2026-08-16",
    "n_langs": 0,
    "multilingual": false,
-   "release": 1
+   "release": 2
   },
   {
    "id": "www.openslr.org/108/",
@@ -5783,7 +5771,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/NTRLab/MediaSpeech/releases/download/1.1/TR.zip",
@@ -5797,7 +5785,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "catalog.ldc.upenn.edu/LDC2006S33",
@@ -5811,7 +5799,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "catalog.ldc.upenn.edu/LDC2012S06",
@@ -5825,7 +5813,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "catalog.ldc.upenn.edu/LDC2017S09",
@@ -5839,7 +5827,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/Xeonen/TurEV-DB",
@@ -5853,7 +5841,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "datacollective.mozillafoundation.org/datasets/cmflnuzw71qkz8x3kil3tgjv",
@@ -5867,7 +5855,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.nexdata.ai/datasets/speechrecog/1324",
@@ -5881,7 +5869,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "magichub.com/datasets/turkish-conversational-speech-corpus/",
@@ -5895,7 +5883,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "magichub.com/datasets/turkish-scripted-speech-corpus-daily-use-sentenc",
@@ -5909,7 +5897,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.futurebeeai.com/dataset/speech-data/turkish-dataset",
@@ -5923,7 +5911,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.shaip.com/offerings/speech-data-catalog/turkish-turkey-dataset/",
@@ -5937,7 +5925,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.shaip.com/offerings/speech-data-catalog/wake-word-turkish-dataset/",
@@ -5951,7 +5939,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "datasets.appen.com/product/tur_asr001/",
@@ -5965,7 +5953,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "catalogue.elra.info/",
@@ -5979,7 +5967,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "librivox.org/keywords/4066",
@@ -5993,7 +5981,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/icimizideki_seytan",
@@ -6007,7 +5995,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/sabahattin-ali-cakicinin-ilk-kursunu-tereke",
@@ -6021,7 +6009,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/kasagi-omer-seyfettin",
@@ -6035,7 +6023,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/uc-nasihat-omer-seyfettin-sesli-kitap-arsivi",
@@ -6049,7 +6037,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/SesliEdebiyatEserleri",
@@ -6063,7 +6051,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/booksbylanguage_turkishottoman",
@@ -6077,7 +6065,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/librivoxaudio",
@@ -6091,7 +6079,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.open.bible/bibles",
@@ -6105,7 +6093,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/NTRLab/MediaSpeech",
@@ -6119,7 +6107,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "commonvoice.mozilla.org/datasets",
@@ -6133,7 +6121,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "commonvoice.mozilla.org/tr",
@@ -6147,7 +6135,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "datacollective.mozillafoundation.org/datasets/cmn2e7kbl01k2mm07gm5n1bc",
@@ -6161,7 +6149,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/HarikalarKutusu/common-voice-tr-experiments",
@@ -6175,7 +6163,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/Nexdata-AI/310-Hours-Turkish-Scripted-Monologue-Smartphone-",
@@ -6189,7 +6177,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "magichub.com/datasets/turkish-scripted-speech-corpus-daily-use-sentenc",
@@ -6203,7 +6191,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.futurebeeai.com/dataset/speech-dataset/tts-monolgue-turkish-turkey",
@@ -6217,7 +6205,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.futurebeeai.com/dataset/speech-dataset/travel-call-center-conversa",
@@ -6231,7 +6219,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "datasets.appen.com/",
@@ -6245,7 +6233,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/omer-seyfettin-klasikleri-diyet",
@@ -6259,7 +6247,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/OmerSeyfettinPembeInciliKaftan",
@@ -6273,7 +6261,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 2
   },
   {
    "id": "librivox.org/search",
@@ -6287,7 +6275,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "librivox.org/author/8697",
@@ -6301,7 +6289,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "www.open.bible/",
@@ -6315,7 +6303,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/IS2AI/TurkicASR",
@@ -6329,7 +6317,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "etd.lib.metu.edu.tr/upload/12618663/index.pdf",
@@ -6343,7 +6331,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/facebookresearch/fairseq/blob/main/examples/mms/README.md",
@@ -6357,7 +6345,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/SpeechColab/GigaSpeech2",
@@ -6371,7 +6359,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/facebookresearch/voxpopuli",
@@ -6385,7 +6373,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/texts?query=turkish+OR+t%C3%BCrk%C3%A7e&and%5B%5D=",
@@ -6399,7 +6387,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "librivox.org/search?primary_key=43",
@@ -6413,7 +6401,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "odtuclass.metu.edu.tr",
@@ -6427,7 +6415,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "openslr.org/resources.php",
@@ -6441,7 +6429,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "catalog.ldc.upenn.edu/",
@@ -6455,7 +6443,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "archive.org/details/srakk0000saba",
@@ -6469,7 +6457,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 1
+   "release": 3
   },
   {
    "id": "github.com/RsGoksel/turkish-academic-corpus-harvester",
@@ -6483,7 +6471,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "github.com/metunlp/llamaturk",
@@ -6497,7 +6485,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "github.com/ArdaYueksel/TurkishMMLU",
@@ -6511,7 +6499,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "github.com/KUIS-AI/cetvel",
@@ -6525,7 +6513,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "github.com/bezir/MMLU-pro-TR",
@@ -6539,7 +6527,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "github.com/malhajar17/lm-evaluation-harness_turkish",
@@ -6553,7 +6541,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "github.com/kesimeg/awesome-turkish-language-models",
@@ -6567,7 +6555,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "github.com/agmmnn/turkish-nlp-resources",
@@ -6581,7 +6569,7 @@
    "verified": "2026-08-16",
    "multilingual": false,
    "n_langs": null,
-   "release": 2
+   "release": 3
   },
   {
    "id": "ocw.metu.edu.tr/",
