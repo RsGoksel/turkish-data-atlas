@@ -42,6 +42,11 @@ h1{font-size:24px;font-weight:700;margin:0;letter-spacing:-.3px}
 :root[data-theme="light"] .themebtn .sun{display:none}
 :root[data-theme="light"] .themebtn .moon{display:block}
 .links{font-size:13.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.links .gh{display:inline-flex;align-items:center;gap:7px;font-weight:600;color:var(--ink)}
+.links .gh:hover{color:var(--accent);text-decoration:none}
+.links .gh svg{width:16px;height:16px;display:block}
+.top .btns{display:flex;gap:8px;flex:none}
+#langbtn{min-width:52px;justify-content:center}
 
 /* --- ust segmentler --- */
 .segs{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;margin:0 0 18px}
@@ -122,23 +127,23 @@ footer{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid 
   <div class="top">
     <div class="txt">
       <h1>Turkish Data Atlas <span class="ver" id="ver"></span></h1>
-      <div class="tag">
-        Türkçe konuşma, görüntü ve metin veri setlerinin tek yerden, doğrulanmış dizini.
-        <div class="en">A verified index of Turkish speech, vision and text datasets.</div>
-      </div>
+      <div class="tag" id="tagline"></div>
     </div>
-    <button class="themebtn" id="themebtn" type="button" aria-label="temayı değiştir">
+    <div class="btns">
+    <button class="themebtn" id="langbtn" type="button" aria-label="language"><span id="langlbl">EN</span></button>
+    <button class="themebtn" id="themebtn" type="button" aria-label="tema / theme">
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      <span>tema</span>
+      <span id="themelbl">tema</span>
     </button>
+    </div>
   </div>
   <div class="links">
-    <span id="verified"></span>
-    <a href="https://github.com/RsGoksel/turkish-data-atlas" target="_blank" rel="noopener">GitHub · katkı</a>
-    <a href="https://huggingface.co/spaces/RsGoksel/turkish-asr-benchmark-stt" target="_blank" rel="noopener">TurkSpeak Bench</a>
+    <a href="https://github.com/RsGoksel/turkish-data-atlas" target="_blank" rel="noopener" class="gh">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub</a>
   </div>
 </header>
 
@@ -148,22 +153,22 @@ footer{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid 
 <p class="method" id="method"></p>
 
 <div class="controls">
-  <input type="search" id="q" placeholder="ara / search — ad, açıklama, görev…" autocomplete="off">
+  <input type="search" id="q" autocomplete="off">
   <select id="fposture">
-    <option value="">lisans: hepsi</option>
-    <option value="commercial">ticari kullanıma açık</option>
-    <option value="non-commercial">ticari-olmayan</option>
-    <option value="unverified">doğrulanamadı</option>
+    <option value="" data-s="lic"></option>
+    <option value="commercial" data-s="lic_c"></option>
+    <option value="non-commercial" data-s="lic_n"></option>
+    <option value="unverified" data-s="lic_u"></option>
   </select>
   <select id="flang">
-    <option value="">dil: hepsi</option>
-    <option value="mono">yalnız Türkçe</option>
-    <option value="multi">çokdilli (Türkçe içeren)</option>
+    <option value="" data-s="lang"></option>
+    <option value="mono" data-s="lang_m"></option>
+    <option value="multi" data-s="lang_x"></option>
   </select>
   <select id="fhost">
-    <option value="">kaynak: hepsi</option>
+    <option value="" data-s="host"></option>
     <option value="huggingface">Hugging Face</option>
-    <option value="external">GitHub / web / kurum</option>
+    <option value="external" data-s="host_x"></option>
   </select>
   <span class="hint" id="shown"></span>
 </div>
@@ -171,8 +176,7 @@ footer{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid 
 <div id="sections"></div>
 
 <footer>
-  <div>Boyutlar ve bağlantılar <span id="vdate"></span> tarihinde doğrulandı. Eksik ya da bayat bir satır için
-  <a href="https://github.com/RsGoksel/turkish-data-atlas" target="_blank" rel="noopener">GitHub'da PR açın</a>.</div>
+  <div id="footnote"></div>
   <div style="margin-top:6px">
     <a href="https://gokselgunduz.com/" target="_blank" rel="noopener">Kadir Göksel Gündüz</a>
     · ITU Energy Institute
@@ -185,22 +189,81 @@ const SRC = ["./datasets.json",
   "https://raw.githubusercontent.com/RsGoksel/turkish-data-atlas/main/datasets.json"];
 const MOD = {
   speech: {tr:"Konuşma", en:"Speech",
-    blurb:"ASR ve TTS için okunmuş, spontan, yayın, parlamento ve telefon kayıtları. "
-        + "Bir modelin gürültü ve kodek altında ne yaptığını görmek için robustluk-öncelikli "
-        + "sıralamaya bakın.",
-    links:[["TurkSpeak Bench — Türkçe ASR sıralaması",
-            "https://huggingface.co/spaces/RsGoksel/turkish-asr-benchmark-stt"]]},
+    blurb:{tr:"ASR ve TTS için okunmuş, spontan, yayın, parlamento ve telefon kayıtları. "
+            + "Bir modelin gürültü ve kodek altında ne yaptığını görmek için robustluk-öncelikli "
+            + "sıralamaya bakın.",
+           en:"Read, spontaneous, broadcast, parliamentary and telephone recordings for ASR and "
+            + "TTS. To see what a model does under noise and codec compression, look at the "
+            + "robustness-first leaderboard."},
+    links:[{tr:"TurkSpeak Bench — Türkçe ASR sıralaması", en:"TurkSpeak Bench — Turkish ASR leaderboard",
+            url:"https://huggingface.co/spaces/RsGoksel/turkish-asr-benchmark-stt"}]},
   vision: {tr:"Görüntü", en:"Computer Vision",
-    blurb:"Şu an ağırlıkla OCR ve belge verisi. Detection, segmentation ve görsel soru-cevap "
-        + "tarafı ince; katalogun katkıya en açık bölümü burası.",
+    blurb:{tr:"Şu an ağırlıkla OCR ve belge verisi. Detection, segmentation ve görsel soru-cevap "
+            + "tarafı ince; katalogun katkıya en açık bölümü burası.",
+           en:"Mostly OCR and document data for now. Detection, segmentation and visual question "
+            + "answering are thin; this is where the catalogue most needs contributions."},
     links:[]},
   llm:    {tr:"Metin / LLM", en:"Text & LLM",
-    blurb:"Ön eğitim korpusları, talimat ve tercih setleri, çeviri, soru-cevap, özetleme ve "
-        + "sınıflandırma. Katalogun en büyük bölümü; çokdilli devlerin Türkçe payı ayrıca "
-        + "işaretli.",
+    blurb:{tr:"Ön eğitim korpusları, talimat ve tercih setleri, çeviri, soru-cevap, özetleme ve "
+            + "sınıflandırma. Katalogun en büyük bölümü; çokdilli devlerin Türkçe payı ayrıca "
+            + "işaretli.",
+           en:"Pretraining corpora, instruction and preference sets, translation, question "
+            + "answering, summarisation and classification. The largest section; the Turkish share "
+            + "of multilingual giants is flagged separately."},
     links:[]},
 };
-const POST = {commercial:["c-ok","ticari OK"], "non-commercial":["c-nc","ticari değil"], unverified:["c-un","doğrulanamadı"]};
+
+const STR = {
+  tagline: {tr:"Türkçe konuşma, görüntü ve metin veri setlerinin tek yerden, doğrulanmış dizini.",
+            en:"A single verified index of Turkish speech, vision and text datasets."},
+  theme:   {tr:"tema", en:"theme"},
+  go:      {tr:"veri setlerine git", en:"go to the datasets"},
+  soon:    {tr:"yakında", en:"soon"},
+  search:  {tr:"ara — ad, açıklama, görev…", en:"search — name, description, task…"},
+  lic:     {tr:"lisans: hepsi", en:"licence: all"},
+  lic_c:   {tr:"ticari kullanıma açık", en:"commercial use allowed"},
+  lic_n:   {tr:"ticari-olmayan", en:"non-commercial"},
+  lic_u:   {tr:"doğrulanamadı", en:"unverified"},
+  lang:    {tr:"dil: hepsi", en:"language: all"},
+  lang_m:  {tr:"yalnız Türkçe", en:"Turkish only"},
+  lang_x:  {tr:"çokdilli (Türkçe içeren)", en:"multilingual (includes Turkish)"},
+  host:    {tr:"kaynak: hepsi", en:"source: all"},
+  host_x:  {tr:"GitHub / web / kurum", en:"GitHub / web / institution"},
+  shown:   {tr:(a,b)=>`${a} / ${b} kayıt gösteriliyor`, en:(a,b)=>`showing ${a} of ${b} records`},
+  recs:    {tr:n=>`${n} kayıt`, en:n=>`${n} records`},
+  all:     {tr:"hepsi", en:"all"},
+  empty:   {tr:"Bu filtrelerle kayıt yok.", en:"No records match these filters."},
+  fail:    {tr:c=>`Katalog yüklenemedi (${c}).`, en:c=>`Could not load the catalogue (${c}).`},
+  th:      {tr:["ad","açıklama","boyut","satır","lisans","indirme"],
+            en:["name","description","size","rows","licence","downloads"]},
+  ml:      {tr:"çokdilli", en:"multilingual"},
+  st_total:{tr:"veri kaynağı", en:"data sources"},
+  st_tr:   {tr:n=>`yalnız Türkçe (${n} set)`, en:n=>`Turkish only (${n} sets)`},
+  st_sp:   {tr:"konuşma", en:"speech"},
+  st_llm:  {tr:"metin / LLM", en:"text / LLM"},
+  st_vi:   {tr:"görüntü", en:"vision"},
+  st_com:  {tr:"ticari kullanıma açık", en:"commercial use allowed"},
+  method:  {tr:(v)=>`Boyutlar Hugging Face dataset-size ucundan ölçüldü, kart beyanından değil. `
+            + `Her bağlantı istendi. Çokdilli korpuslar işaretli ve boyutları tüm dillerin `
+            + `boyutudur: ${v.multilingual_n} çokdilli set birlikte ${v.multilingual_all_langs_tb.toFixed(0)} TB `
+            + `tutuyor, oysa gerçekten tek-dilli Türkçe veri ${v.turkish_only_tb.toFixed(2)} TB.`,
+            en:(v)=>`Sizes were measured through the Hugging Face dataset-size endpoint rather than `
+            + `copied from cards, and every link was requested. Multilingual corpora are flagged and `
+            + `their size covers all languages: ${v.multilingual_n} such sets come to `
+            + `${v.multilingual_all_langs_tb.toFixed(0)} TB together, whereas genuinely `
+            + `Turkish-only data is ${v.turkish_only_tb.toFixed(2)} TB.`},
+  foot:    {tr:d=>`Bağlantılar ${d} tarihinde doğrulandı. Eksik ya da eski bilgi için `
+            + `<a href="https://github.com/RsGoksel/turkish-data-atlas" target="_blank" rel="noopener">GitHub'da PR açabilirsiniz</a>.`,
+            en:d=>`Links were verified on ${d}. For anything missing or out of date you can `
+            + `<a href="https://github.com/RsGoksel/turkish-data-atlas" target="_blank" rel="noopener">open a PR on GitHub</a>.`},
+};
+
+let LANG = (localStorage.getItem("tda-lang") === "en") ? "en" : "tr";
+const T = k => { const v = STR[k]; return v[LANG]; };
+const POSTC = {commercial:"c-ok", "non-commercial":"c-nc", unverified:"c-un"};
+const POSTL = {commercial:{tr:"ticari OK",en:"commercial OK"},
+               "non-commercial":{tr:"ticari değil",en:"non-commercial"},
+               unverified:{tr:"doğrulanamadı",en:"unverified"}};
 const ORDER = ["speech","vision","llm"];
 const taskSel = {speech:null, vision:null, llm:null};
 let DATA = null;
@@ -217,31 +280,29 @@ const CHEV = `<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="cu
 function head(m){
   const v = m.volume, c = m.counts;
   document.getElementById("stats").innerHTML = [
-    [c.total, fmtN(c.total), "veri kaynağı"],
-    [1, v.turkish_only_tb.toFixed(2)+" TB", "yalnız Türkçe (" + v.turkish_only_n + " set)"],
-    [c.by_modality.speech||0, fmtN(c.by_modality.speech||0), "konuşma"],
-    [c.by_modality.llm||0,    fmtN(c.by_modality.llm||0),    "metin / LLM"],
-    [c.by_modality.vision||0, fmtN(c.by_modality.vision||0), "görüntü"],
-    [c.by_posture.commercial||0, fmtN(c.by_posture.commercial||0), "ticari kullanıma açık"],
+    [c.total, fmtN(c.total), T("st_total")],
+    [1, v.turkish_only_tb.toFixed(2)+" TB", T("st_tr")(v.turkish_only_n)],
+    [c.by_modality.speech||0, fmtN(c.by_modality.speech||0), T("st_sp")],
+    [c.by_modality.llm||0,    fmtN(c.by_modality.llm||0),    T("st_llm")],
+    [c.by_modality.vision||0, fmtN(c.by_modality.vision||0), T("st_vi")],
+    [c.by_posture.commercial||0, fmtN(c.by_posture.commercial||0), T("st_com")],
   ].filter(r => r[0])
    .map(([,n,l]) => `<div class="stat"><div class="n">${n}</div><div class="l">${esc(l)}</div></div>`).join("");
 
-  document.getElementById("method").textContent =
-    `Boyutlar Hugging Face dataset-size ucundan ölçüldü, kart beyanından değil. Her bağlantı istendi. `
-  + `Çokdilli korpuslar işaretli ve boyutları tüm dillerin boyutudur: ${v.multilingual_n} çokdilli set `
-  + `birlikte ${v.multilingual_all_langs_tb.toFixed(0)} TB tutuyor, oysa gerçekten tek-dilli Türkçe veri `
-  + `${v.turkish_only_tb.toFixed(2)} TB.`;
+  document.getElementById("method").textContent = T("method")(v);
 
   document.getElementById("segs").innerHTML = ORDER
     .filter(k => c.by_modality[k])
     .map(k => {
       const rel = (MOD[k].links || [])
-        .map(l => `<a href="${l[1]}" target="_blank" rel="noopener">${l[0]} \u2197</a>`).join("");
+        .map(l => `<a href="${l.url}" target="_blank" rel="noopener">${esc(l[LANG])} \u2197</a>`).join("");
+      const title = LANG === "tr" ? MOD[k].tr : MOD[k].en;
+      const sub2  = LANG === "tr" ? MOD[k].en : MOD[k].tr;
       return `<div class="seg">
-        <h3>${MOD[k].tr}<span class="en">${MOD[k].en}</span><span class="n">${c.by_modality[k]}</span></h3>
-        <p>${MOD[k].blurb}</p>
+        <h3>${esc(title)}<span class="en">${esc(sub2)}</span><span class="n">${c.by_modality[k]}</span></h3>
+        <p>${esc(MOD[k].blurb[LANG])}</p>
         ${rel ? `<div class="rel">${rel}</div>` : ""}
-        <button class="go" type="button" data-jump="${k}">veri setlerine git
+        <button class="go" type="button" data-jump="${k}">${T("go")}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
             stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </button></div>`;
@@ -249,8 +310,9 @@ function head(m){
 }
 
 function row(d){
-  const [cls,lbl] = POST[d.posture] || POST.unverified;
-  const ml = d.multilingual ? ' <span class="chip c-ml">çokdilli</span>' : "";
+  const cls = POSTC[d.posture] || POSTC.unverified;
+  const lbl = (POSTL[d.posture] || POSTL.unverified)[LANG];
+  const ml = d.multilingual ? ` <span class="chip c-ml">${T("ml")}</span>` : "";
   const gt = d.gated ? ' <span class="chip c-un">gated</span>' : "";
   return `<tr>
     <td><a class="name" href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.id)}</a>${ml}${gt}</td>
@@ -263,6 +325,7 @@ function row(d){
 }
 
 function render(){
+  const TH = T("th");
   const q  = document.getElementById("q").value.trim().toLowerCase();
   const fp = document.getElementById("fposture").value;
   const fl = document.getElementById("flang").value;
@@ -277,7 +340,7 @@ function render(){
     if (q && !((d.id+" "+d.desc+" "+d.task+" "+(d.license||"")).toLowerCase().includes(q))) return false;
     return true;
   });
-  document.getElementById("shown").textContent = `${keep.length} / ${DATA.datasets.length} kayıt gösteriliyor`;
+  document.getElementById("shown").textContent = T("shown")(keep.length, DATA.datasets.length);
 
   const out = [];
   for (const m of ORDER){
@@ -292,7 +355,7 @@ function render(){
     const sel = taskSel[m];
 
     const chips = `<div class="tasks">
-      <button class="tf" type="button" data-task="${m}|" aria-pressed="${!sel}">hepsi
+      <button class="tf" type="button" data-task="${m}|" aria-pressed="${!sel}">${T("all")}
         <span class="n">${rows.length}</span></button>`
       + tasks.map(t => `<button class="tf" type="button" data-task="${m}|${esc(t)}"
           aria-pressed="${sel === t}">${esc(t)}<span class="n">${byTask[t].length}</span></button>`).join("")
@@ -302,18 +365,19 @@ function render(){
     for (const t of (sel ? [sel] : tasks)){
       body += `<div class="subhead">${esc(t)} · ${byTask[t].length}</div>
         <div class="tablewrap"><table>
-        <thead><tr><th>ad</th><th>açıklama</th><th class="num">boyut</th>
-        <th class="num">satır</th><th>lisans</th><th class="num">indirme</th></tr></thead>
+        <thead><tr><th>${TH[0]}</th><th>${TH[1]}</th><th class="num">${TH[2]}</th>
+        <th class="num">${TH[3]}</th><th>${TH[4]}</th><th class="num">${TH[5]}</th></tr></thead>
         <tbody>${byTask[t].map(row).join("")}</tbody></table></div>`;
     }
     // varsayilan: hepsi kapali. yalnizca bir filtre aktifse acilir.
     out.push(`<details class="sec" id="sec-${m}"${filtering ? " open" : ""}>
-      <summary>${CHEV}${MOD[m].tr} <span class="sub">· ${MOD[m].en}</span>
-      <span class="cnt">${rows.length} kayıt</span></summary>${body}</details>`);
+      <summary>${CHEV}${esc(LANG === "tr" ? MOD[m].tr : MOD[m].en)}
+      <span class="sub">· ${esc(LANG === "tr" ? MOD[m].en : MOD[m].tr)}</span>
+      <span class="cnt">${T("recs")(rows.length)}</span></summary>${body}</details>`);
   }
   const host = document.getElementById("sections");
   const wasOpen = new Set([...host.querySelectorAll("details.sec[open]")].map(d => d.id));
-  host.innerHTML = out.join("") || `<div class="empty">Bu filtrelerle kayıt yok.</div>`;
+  host.innerHTML = out.join("") || `<div class="empty">${T("empty")}</div>`;
   if (!filtering) wasOpen.forEach(id => { const d = document.getElementById(id); if (d) d.open = true; });
 }
 
@@ -338,6 +402,7 @@ document.addEventListener("click", e => {
   el.scrollIntoView({behavior:"smooth", block:"start"});
 });
 
+paintStatic();
 (async () => {
   let last = "";
   for (const u of SRC){
@@ -346,17 +411,33 @@ document.addEventListener("click", e => {
   }
   if (!DATA){
     document.getElementById("sections").innerHTML =
-      `<div class="empty">Katalog yüklenemedi (${esc(String(last))}).</div>`;
+      `<div class="empty">${T("fail")(esc(String(last)))}</div>`;
     return;
   }
   document.getElementById("ver").textContent = DATA.meta.version || "";
-  document.getElementById("verified").textContent = "doğrulama: " + DATA.meta.verified;
-  document.getElementById("vdate").textContent = DATA.meta.verified;
+  paintStatic();
   head(DATA.meta);
   render();
   ["q","fposture","flang","fhost"].forEach(id =>
     document.getElementById(id).addEventListener("input", render));
 })();
+
+function paintStatic(){
+  document.documentElement.lang = LANG;
+  document.getElementById("tagline").textContent = T("tagline");
+  document.getElementById("themelbl").textContent = T("theme");
+  document.getElementById("langlbl").textContent = LANG === "tr" ? "EN" : "TR";
+  document.getElementById("q").placeholder = T("search");
+  document.querySelectorAll("option[data-s]").forEach(o => o.textContent = T(o.dataset.s));
+  if (DATA) document.getElementById("footnote").innerHTML = T("foot")(DATA.meta.verified);
+}
+
+document.getElementById("langbtn").addEventListener("click", () => {
+  LANG = LANG === "tr" ? "en" : "tr";
+  localStorage.setItem("tda-lang", LANG);
+  paintStatic();
+  if (DATA){ head(DATA.meta); render(); }
+});
 
 const root = document.documentElement;
 document.getElementById("themebtn").addEventListener("click", () => {
