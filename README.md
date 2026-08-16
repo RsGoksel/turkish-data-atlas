@@ -1,6 +1,6 @@
 ---
-title: Turkish Dataset Index
-emoji: 🗂️
+title: Turkish Data Atlas
+emoji: 🧭
 colorFrom: blue
 colorTo: gray
 sdk: static
@@ -9,7 +9,7 @@ pinned: false
 license: mit
 ---
 
-# Turkish Dataset Index
+# Turkish Data Atlas
 
 Türkçe konuşma, görüntü ve metin veri setlerinin tek yerden, **doğrulanmış** dizini.
 A single verified index of Turkish speech, vision and text datasets.
@@ -48,7 +48,7 @@ downloads · multilingual · n_langs · verified`.
 ## Katkı
 
 Eksik ya da bayat bir satır için
-[GitHub'da PR açın](https://github.com/RsGoksel/turkish-dataset-index). Yeni kayıtta
+[GitHub'da PR açın](https://github.com/RsGoksel/turkish-data-atlas). Yeni kayıtta
 en azından bağlantı ve modality gerekir; boyut ve lisans bir sonraki doğrulama turunda
 API'den çekilir.
 
@@ -57,4 +57,4 @@ API'den çekilir.
 Katalogun kendisi MIT. Listelenen veri setlerinin lisansları kendilerine aittir ve
 `license` sütununda gösterilir; ticari kullanımdan önce kaynağın kendi kartını okuyun.
 
-Kadir Göksel Gündüz · İstanbul Teknik Üniversitesi, Enerji Enstitüsü
+[Kadir Göksel Gündüz](https://gokselgunduz.com/) · ITU Energy Institute
